@@ -1,0 +1,110 @@
+html {
+  height:100%;
+}
+
+body {
+  margin:auto;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #ff33dc 50%, #d22412 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+/* .content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+} */
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+.card {
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: 20%;
+  width: 60%;
+ height: 55%;
+  margin: 10px;
+  float: left;
+  perspective: 500px;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,20,0,0.1);
+  transition: transform 2s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 1s;
+  css
+}
+
+.front,
+.back {
+  position: absolute;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  line-height: 300px;
+  color: #03111A;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: #5b0b83;
+/*   background-size: cover; */
+/*   object-fit: fill; */
+  color: white;
+  transform: rotateY( 180deg );
+}
+
+.p {
+  font-size: 20px;
+
+}
